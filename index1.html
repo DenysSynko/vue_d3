@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <title>Day3</title>
+</head>
+<body>
+  <div id="app">
+    <p><span style="font-size: 25px;">Enter Age:</span>
+    <input v-model.number="age" type="number"></p>
+    
+    <p><span style="font-size: 25px;">Enter Message:</span>
+    <input v-model.lazy="msg">
+	Значення msg: {{ msg }}</p>
+    
+    <p><span style="font-size: 25px;">Enter Message:</span>
+    <input v-model.trim="message"></p>
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        age: 0,
+        msg: '',
+        message: ''
+      }
+    });
+  </script>
+</body>
+</html>
